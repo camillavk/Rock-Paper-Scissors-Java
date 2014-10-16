@@ -25,14 +25,23 @@ describe('Rock Paper Scissors', function() {
 			rules = new Rules
 			rock = new Rock
 			scissors = new Scissors
+			draw = new Draw
 		});
 
 		it('Rock beats Scissors', function() {
-			expect(rules.winningChoiceOf(rock, scissors)).toEqual(rock)
+			expect(rules.winningChoiceOf(rock, scissors)).toEqual(rock);
 		});
 
 		it('Scissors are beaten by Rock', function() {
-			expect(rules.winningChoiceOf(scissors, rock)).toEqual(rock)
+			expect(rules.winningChoiceOf(scissors, rock)).toEqual(rock);
+		});
+
+		it('Paper beats Rock', function() {
+			expect(rules.winningChoiceOf(paper, rock)).toEqual(paper);
+		});
+
+		it('Scissors draws with Scissors', function() {
+			expect(rules.winningChoiceOf(scissors, scissors)).toEqual(draw);
 		});
 
 	});
