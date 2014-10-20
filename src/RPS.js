@@ -5,15 +5,19 @@ function Rules() {
 		"Paper" : "Rock"
 	}
 };
+
 function Rock() {
 	this.type = "Rock"
 };
+
 function Scissors() {
 	this.type = "Scissors"
 };
+
 function Paper() {
 	this.type = "Paper"
 };
+
 function Draw() {};
 
 Rules.prototype.winningChoiceOf = function(choiceOne, choiceTwo) {
