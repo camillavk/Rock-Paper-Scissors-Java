@@ -1,10 +1,12 @@
-function Rules() {
-	this.trumps = {
-		"Rock" : "Scissors",
-		"Scissors" : "Paper",
-		"Paper" : "Rock"
-	}
-};
+// function Rules() {
+// 	this.trumps = {
+// 		"Rock" : "Scissors",
+// 		"Scissors" : "Paper",
+// 		"Paper" : "Rock"
+// 	}
+// };
+
+function Game() {};
 
 function Rock() {
 	this.type = "Rock"
@@ -20,13 +22,23 @@ function Paper() {
 
 function Draw() {};
 
-Rules.prototype.winningChoiceOf = function(choiceOne, choiceTwo) {
+Game.prototype.winningChoiceOf = function(choiceOne, choiceTwo) {
 	if(choiceOne.type === choiceTwo.type)
 		return new Draw;
-	else if(this.trumps[choiceOne.type] === choiceTwo.type)
+	else if(this.PAIRS[choiceOne.type][choiceTwo.type] != undefined)
 		return choiceOne;
 	else
 		return choiceTwo;
-}
+};
+
+Game.prototype.PAIRS = {
+	"Rock": { "Scissors": 'blunts' },
+	"Paper": { "Rock": 'covers' },
+	"Scissors": { "Paper": 'cuts' }
+};
+
+// Game.prototype.winningChoiceOf = function(choiceOne, choiceTwo) {
+// 	if(choiceOne
+// };
 
 // {'Rock' : { 'beats' : 'Scissors' } }
