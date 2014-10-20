@@ -9,6 +9,7 @@ body {
 h1 {
 	font-size: 3em;
 	text-align: center;
+	text-shadow: 2px 2px 8px #33CC33;
 }
 
 h2 {

@@ -1,11 +1,3 @@
-// function Rules() {
-// 	this.trumps = {
-// 		"Rock" : "Scissors",
-// 		"Scissors" : "Paper",
-// 		"Paper" : "Rock"
-// 	}
-// };
-
 function Game() {};
 
 function Rock() {
@@ -20,6 +12,14 @@ function Paper() {
 	this.type = "Paper"
 };
 
+function Spock() {
+	this.type = "Spock"
+};
+
+function Lizard() {
+	this.type = "Lizard"
+};
+
 function Draw() {};
 
 Game.prototype.winningChoiceOf = function(choiceOne, choiceTwo) {
@@ -32,13 +32,9 @@ Game.prototype.winningChoiceOf = function(choiceOne, choiceTwo) {
 };
 
 Game.prototype.PAIRS = {
-	"Rock": { "Scissors": 'blunts' },
-	"Paper": { "Rock": 'covers' },
-	"Scissors": { "Paper": 'cuts' }
+	"Rock": { "Scissors": 'blunts', "Lizard": 'crushes' },
+	"Paper": { "Rock": 'covers', "Spock": 'disproves' },
+	"Scissors": { "Paper": 'cuts', "Lizard": 'decapitates' },
+	"Lizard": { "Spock": 'poisons', "Paper": 'eats' },
+	"Spock": { "Scissors": 'smashes', "Rock": 'vapourizes' }
 };
-
-// Game.prototype.winningChoiceOf = function(choiceOne, choiceTwo) {
-// 	if(choiceOne
-// };
-
-// {'Rock' : { 'beats' : 'Scissors' } }
