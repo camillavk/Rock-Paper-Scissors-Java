@@ -28,6 +28,11 @@ img:hover {
   transition: all 0.5s ease;
 }
 
+img #cats {
+	height: 3em;
+	width: 3em;
+}
+
 
 /*******************typography*************************/
 *{
@@ -78,4 +83,6 @@ footer {
   a {
   	text-decoration: none;
   }
+
+
 
