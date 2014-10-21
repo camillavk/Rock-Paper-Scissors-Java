@@ -18,10 +18,12 @@ ul li {
 
 h1, h2, h3 {
 	text-align: center;
+	padding: 0.4em;
+	margin: auto;
 }
 
 img:hover {
-	width: 250px;
+	width: 15em;
 	-webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -29,9 +31,16 @@ img:hover {
 }
 
 img #cats {
-	height: 3em;
-	width: 3em;
+	position: relative;
+	height: 2em;
+	width: 2em;
 }
+
+/*footer #my-logo {
+	position: relative;
+	top: 50%;
+	bottom: 50%;
+}*/
 
 
 /*******************typography*************************/
@@ -60,11 +69,15 @@ footer {
   }
 
   footer > * {
-    margin: auto inherit;
+    /*margin: auto inherit*/
+    padding: 0.4em;
   }
 
   footer img {
     vertical-align: top;
+    position: relative;
+		height: 9.5em;
+		width: 9.5em;
   }
 
   footer #technologies {
