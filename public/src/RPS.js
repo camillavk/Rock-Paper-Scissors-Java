@@ -20,7 +20,9 @@ function Lizard() {
 	this.type = "Lizard"
 };
 
-function Draw() {};
+function Draw() {
+	this.type = "Draw"
+};
 
 Game.prototype.winningChoiceOf = function(choiceOne, choiceTwo) {
 	if(choiceOne.type === choiceTwo.type)
