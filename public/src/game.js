@@ -6,6 +6,9 @@ function Message(winner, loser) {
 	console.log(winner)
 	console.log(loser)
 	$('h2').text(winner.type + " " + game.winningVerb(winner.type, loser.type) + " " + loser.type)
+	setTimeout(function() {
+		$('h2').text("Make your choice...")
+	}, 1800)
 }
 
 var computersChoice = function() {
@@ -22,3 +25,4 @@ $('img').on('click', function() {
 		Message(winner, loser)
 });
 
+	setTimeout(Message, 1500)
