@@ -20,23 +20,22 @@ function Lizard() {
 	this.type = "Lizard"
 };
 
-function Draw() {
-	this.type = "Draw"
-};
 
 Game.prototype.winningChoiceOf = function(choiceOne, choiceTwo) {
-	if(choiceOne.type === choiceTwo.type)
-		return new Draw;
-	else if(this.PAIRS[choiceOne.type][choiceTwo.type] != undefined)
+	if(this.PAIRS[choiceOne.type][choiceTwo.type] != undefined)
 		return choiceOne;
 	else
 		return choiceTwo;
 };
 
+Game.prototype.winningVerb = function(choiceOne, choiceTwo) {
+	return this.PAIRS[choiceOne][choiceTwo]
+};
+
 Game.prototype.PAIRS = {
-	"Rock": { "Scissors": 'blunts', "Lizard": 'crushes' },
-	"Paper": { "Rock": 'covers', "Spock": 'disproves' },
-	"Scissors": { "Paper": 'cuts', "Lizard": 'decapitates' },
-	"Lizard": { "Spock": 'poisons', "Paper": 'eats' },
-	"Spock": { "Scissors": 'smashes', "Rock": 'vapourizes' }
+	"Rock": { "Scissors": 'blunts', "Lizard": 'crushes' , "Rock": 'draws with'},
+	"Paper": { "Rock": 'covers', "Spock": 'disproves', "Paper": 'draws with' },
+	"Scissors": { "Paper": 'cuts', "Lizard": 'decapitates', "Scissors": 'draws with' },
+	"Lizard": { "Spock": 'poisons', "Paper": 'eats', "Lizard": 'draws with' },
+	"Spock": { "Scissors": 'smashes', "Rock": 'vapourizes', "Spock": 'draws with' }
 };
