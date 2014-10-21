@@ -8,12 +8,16 @@ body {
 	background-color: #CCFF99;
 }
 
+ul {
+	position: relative;
+	margin: 0.1em;
+}
+
 ul li {
 	list-style-type: none;
 	display: inline-block;
-	padding: 20px;
+	padding: 1.5em;
 	position: relative;
-	left: 10%;
 }
 
 h1, h2, h3 {
@@ -23,24 +27,19 @@ h1, h2, h3 {
 }
 
 img:hover {
-	width: 15em;
+	width: 10em;
+	height: 10em;
 	-webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
-img #cats {
+img {
 	position: relative;
-	height: 2em;
-	width: 2em;
+	height: 8em;
+	width: 8em;
 }
-
-/*footer #my-logo {
-	position: relative;
-	top: 50%;
-	bottom: 50%;
-}*/
 
 
 /*******************typography*************************/
@@ -69,7 +68,6 @@ footer {
   }
 
   footer > * {
-    /*margin: auto inherit*/
     padding: 0.4em;
   }
 
