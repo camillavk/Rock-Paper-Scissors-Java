@@ -3,13 +3,11 @@ var game = new Game
 	var gest = {Rock: new Rock, Paper: new Paper, Scissors: new Scissors, Spock: new Spock, Lizard: new Lizard};
 
 function Message(winner, loser) {
-	console.log(winner)
-	console.log(loser)
-	$('h2').text(winner.type + " " + game.winningVerb(winner.type, loser.type) + " " + loser.type)
+	$('h3').text(winner.type + " " + game.winningVerb(winner.type, loser.type) + " " + loser.type)
 	setTimeout(function() {
-		$('h2').text("Make your choice...")
-	}, 1800)
-}
+		$('h3').text(" ")
+	}, 2000)
+};
 
 var computersChoice = function() {
 	var gestures = [new Rock, new Paper, new Scissors, new Lizard, new Spock];
@@ -25,4 +23,3 @@ $('img').on('click', function() {
 		Message(winner, loser)
 });
 
-	setTimeout(Message, 1500)

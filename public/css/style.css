@@ -1,30 +1,51 @@
-*{
-	font-family:Lato;
-}
+/****************import***********************/
+
+@import url('http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext');
+
+/*******************layout************************/
 
 body {
 	background-color: #CCFF99;
 }
 
+ul li {
+	list-style-type: none;
+	display: inline-block;
+	padding: 20px;
+	position: relative;
+	left: 10%;
+}
+
+h1, h2, h3 {
+	text-align: center;
+}
+
+img:hover {
+	width: 250px;
+	-webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+
+/*******************typography*************************/
+*{
+	font-family:Lato;
+}
+
 h1 {
 	font-size: 3em;
-	text-align: center;
 	text-shadow: 2px 2px 8px #33CC33;
 }
 
-h2 {
+h2, h3 {
 	font-size: 2em;
-	text-align: center;
 	text-shadow: 2px 2px 8px #33CC33;
-} 
+}
 
-table {
-	border: none;
-	margin-left: auto;
-	margin-right: auto;
-	width: 50px;
-	}
+h4 {
+	font-size: 1em;
+	font-weight: bold;
+}
 
-	th {
-		padding: 30px;
-	}
