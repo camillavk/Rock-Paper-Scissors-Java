@@ -23,3 +23,12 @@ $('img').on('click', function() {
 		Message(winner, loser)
 });
 
+$('img').on('click', function() {
+	var choiceOne = gest[$(this).data('gesture')]
+	var choiceTwo = computersChoice()
+	var winner = game.winningChoiceOf(choiceOne, choiceTwo)
+	if (winner === choiceOne)
+		$('#counterwin').html(function(i, val) {return +val+1 })
+	else if (winner === choiceTwo)
+		$('#counterlose').html(function(i, val) {return +val+1 })
+});

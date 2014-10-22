@@ -26,6 +26,11 @@ h1, h2, h3 {
 	margin: auto;
 }
 
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 img:hover {
 	width: 10em;
 	height: 10em;
@@ -52,7 +57,7 @@ h1 {
 	text-shadow: 2px 2px 8px #33CC33;
 }
 
-h2, h3 {
+h2, h3, td {
 	font-size: 2em;
 	text-shadow: 2px 2px 8px #33CC33;
 }
